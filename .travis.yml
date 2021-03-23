@@ -4,7 +4,7 @@ version:
 
 before_install:
   - python -m pip install virtualenv
-  - virtualenv -p python${PYTHON:0:1} venv
+  - virtualenv venv
   - source venv/bin/activate
 
 install:
