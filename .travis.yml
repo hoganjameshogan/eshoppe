@@ -2,8 +2,13 @@ language: python
 version: 
   - "3.6"
 
+before_install:
+  - python -m pip install --user virtualenv
+  - virtualenv -p python${PYTHON:0:1} venv
+  - source venv/bin/activate
+
 install:
-  - pip install -r requirements.txt
+  - python -m pip install .
 
 script:
   - script: python manage.py test
