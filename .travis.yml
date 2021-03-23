@@ -8,7 +8,7 @@ before_install:
   - source venv/bin/activate
 
 install:
-  - python -m pip install .
+  - pip install .
 
 script:
   - script: python manage.py test
